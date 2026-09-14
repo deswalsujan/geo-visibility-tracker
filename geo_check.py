@@ -21,7 +21,7 @@ API_KEY = os.environ["GEMINI_API_KEY"]
 MODEL = "gemini-3.6-flash"
 URL = f"https://generativelanguage.googleapis.com/v1beta/models/{MODEL}:generateContent"
 
-PROMPT = "What are the best CRM tools for a small marketing team?"
+PROMPT = "What's the best cap table and equity management software for an early-stage startup?"
 
 RESULTS_FILE = "results.csv"
 FIELDNAMES = ["timestamp", "trigger_type", "model", "prompt", "answer"]
