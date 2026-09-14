@@ -1,0 +1,9 @@
+[project]
+name = "sprint"
+version = "0.1.0"
+description = "Six-week AI marketing engineering sprint"
+requires-python = ">=3.9"
+dependencies = [
+    "python-dotenv>=1.2.1",
+    "requests>=2.32.5",
+]
