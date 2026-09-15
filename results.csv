@@ -140,3 +140,66 @@ Zoho CRM is part of the massive Zoho suite. It offers enterprise-grade features 
 *   Choose **Brevo** if you have a large contact list and need to keep software costs as low as possible.
 *   Choose **Monday.com** if your marketing team wants campaign management and CRM pipeline tracking in one place.
 *   Choose **Zoho** if you want deep analytics, heavy customization, and a full suite of business software on a budget."
+2026-09-15T08:54:09.629375+00:00,scheduled,gemini-3.6-flash,What's the best cap table and equity management software for an early-stage startup?,"For an early-stage startup (pre-seed to Series A), the two clear market leaders are **Pulley** and **Carta**, with **AngelList Stack** as a strong contender for companies starting from scratch.
+
+Here is a breakdown of the best options depending on your startup’s specific situation:
+
+---
+
+### 1. **Pulley** – *Best Overall for Early-Stage Startups*
+Pulley has rapidly become the favorite cap table platform for Y Combinator startups and early-stage founders because it is fast, user-friendly, and transparently priced.
+
+* **Best for:** Founders who want a fast, cost-effective, and easy-to-use platform with great customer support.
+* **Pricing:** **Free** (Seed tier) for up to 25 stakeholders and $1M raised. Paid tiers start around $1,200/year, which includes discounted 409A valuations.
+* **Pros:**
+  * **Speed:** You can set up your cap table in under an hour.
+  * **Fundraising Tools:** Excellent scenario modeling tools (e.g., ""How much dilution will I take if I raise $2M on a SAFE?"").
+  * **Top-tier Support:** Customer service is fast and often helps clean up historical cap table mistakes.
+  * **409A Valuations:** Fast turnaround times and affordable.
+* **Cons:** Less recognized by legacy institutional VCs than Carta (though this gap is closing quickly).
+
+---
+
+### 2. **Carta** – *The Industry Standard (Best if backed by major VCs)*
+Carta is the ""gorilla in the room."" Almost every venture lawyer and investor is intimately familiar with it. 
+
+* **Best for:** Startups that have already raised significant venture capital, plan to scale very quickly, or have investors who explicitly demand Carta.
+* **Pricing:** **Carta Launch** is **Free** for up to 25 stakeholders and $1M in capital raised. After that, pricing escalates rapidly (often $3,000 to $8,000+/year).
+* **Pros:**
+  * **Network Effects:** Seamless for institutional investors to accept and manage shares in their existing Carta portfolios.
+  * **Ecosystem:** Offers a massive suite of tools for secondary sales, liquidity management, and fund administration.
+  * **Lawyer Preference:** Most Silicon Valley law firms prefer Carta because they use it daily.
+* **Cons:**
+  * **Price Hikes:** Once you outgrow the free tier, it becomes significantly more expensive than competitors.
+  * **Customer Service:** Can feel impersonal compared to newer players.
+
+---
+
+### 3. **AngelList Stack** – *Best ""All-in-One"" (Pre-Incorporation or Day 1)*
+If you haven't incorporated yet or are looking for a unified tool for banking, incorporation, equity, and fundraising, AngelList Stack is a compelling choice.
+
+* **Best for:** First-time founders who want a single dashboard for Incorporation + Banking + Cap Table + SAFEs.
+* **Pricing:** Varies, but highly competitive for early-stage bundled services.
+* **Pros:**
+  * Seamless integration between your corporate bank account, roll-up vehicles (RUVs), and cap table.
+  * Easy to issue SAFEs and accept money instantly.
+* **Cons:**
+  * Locks you into the AngelList ecosystem. Harder to migrate away later if you want custom banking or legal setups.
+
+---
+
+### 4. **LTSE Equity (formerly Captable.io)** – *Best Bootstrapped / Free Option*
+Created by the Long-Term Stock Exchange, LTSE Equity is built specifically to remain simple and low-cost.
+
+* **Best for:** Bootstrapped or self-funded startups looking for a basic, no-frills tool to track equity without paying software subscriptions.
+* **Pricing:** Generous free tier (up to 25 stakeholders), then ~$50/month.
+* **Pros:** Very intuitive, free/cheap, great for basic dilution modeling.
+* **Cons:** Lacks advanced compliance, stock option exercise flows, and integrated 409A valuation services compared to Pulley or Carta.
+
+---
+
+### Summary Recommendation: Which should you pick?
+
+1. **Pick Pulley if:** You are early-stage, want a modern platform, need affordable 409A valuations, and value fast, human customer support. *(This is the top choice for most 2024–2025 early-stage startups).*
+2. **Pick Carta Launch if:** You are raising from top-tier institutional VCs (like Sequoia, A16Z) who heavily prefer Carta, and you don't mind paying higher costs down the road.
+3. **Pick AngelList Stack if:** You haven't incorporated yet and want a single platform to handle legal incorporation, banking, and cap table setup all at once."
