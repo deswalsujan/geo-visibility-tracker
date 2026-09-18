@@ -6,7 +6,7 @@ name: geo_check
 
 on:
   schedule:
-    - cron: "30 3 * * *" # 09:00 IST daily (IST has no DST, fixed UTC+5:30 offset)
+    - cron: "10 22 * * *" # Fires 22:10 UTC to land ~09:00 AM IST; compensates for this repo's ~5h20m schedule-trigger delay, observed 9/15-9/17, see LOG.md
   workflow_dispatch: {}
 
 permissions:
