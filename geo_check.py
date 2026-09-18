@@ -1,7 +1,10 @@
-# Sends one prompt to Gemini Flash and appends the question, answer, and
-# timestamp as a new row in results.csv. Every row is tagged scheduled or
-# manual via --trigger-type, so analysis scripts can filter to the clean
-# scheduled baseline and ignore ad hoc test runs.
+# Loops through every question in questions.py and asks each of three
+# providers (Gemini, Claude Haiku, OpenAI) for an answer, appending
+# each prompt/answer pair as a new row in results.csv. Every row is
+# tagged scheduled or manual via --trigger-type, so analysis scripts
+# can filter to the clean scheduled baseline and ignore ad hoc test
+# runs. Dedup is keyed on model + prompt + date, so a partial or
+# retried run only fills in what's still missing.
 #
 # Run with: uv run geo_check.py --trigger-type manual
 # The GitHub Action passes --trigger-type scheduled for the daily cron run.
@@ -19,28 +22,38 @@ from questions import QUESTIONS
 
 load_dotenv()
 
-API_KEY = os.environ["GEMINI_API_KEY"]
-MODEL = "gemini-3.6-flash"
-URL = f"https://generativelanguage.googleapis.com/v1beta/models/{MODEL}:generateContent"
-DELAY_SECONDS = 8  # pause between questions, keeps sustained throughput well under Gemini Flash's free-tier rate limit
-MAX_ATTEMPTS = 3  # retries for a single question on 429/503 before giving up on it
-RETRY_BACKOFF_SECONDS = 5  # doubles each retry: 5s, then 10s
+GEMINI_API_KEY = os.environ["GEMINI_API_KEY"]
+ANTHROPIC_API_KEY = os.environ["ANTHROPIC_API_KEY"]
+OPENAI_API_KEY = os.environ["OPENAI_API_KEY"]
+
+GEMINI_MODEL = "gemini-3.6-flash"
+GEMINI_URL = f"https://generativelanguage.googleapis.com/v1beta/models/{GEMINI_MODEL}:generateContent"
+GEMINI_DELAY_SECONDS = 8  # keeps sustained throughput well under Gemini Flash's free-tier rate limit
+GEMINI_MAX_ATTEMPTS = 3
+GEMINI_RETRY_BACKOFF_SECONDS = 5  # doubles each retry: 5s, then 10s
+
+HAIKU_MODEL = "claude-haiku-4-5-20251001"
+ANTHROPIC_URL = "https://api.anthropic.com/v1/messages"
+HAIKU_DELAY_SECONDS = 2
+HAIKU_MAX_ATTEMPTS = 3
+HAIKU_RETRY_BACKOFF_SECONDS = 3  # doubles each retry: 3s, then 6s
+
+OPENAI_MODEL = "gpt-5.6-luna"  # verified against platform.openai.com/docs/models, OpenAI's current lowest-cost general-purpose model
+OPENAI_URL = "https://api.openai.com/v1/chat/completions"
+OPENAI_DELAY_SECONDS = 2
+OPENAI_MAX_ATTEMPTS = 3
+OPENAI_RETRY_BACKOFF_SECONDS = 3  # doubles each retry: 3s, then 6s
 
 RESULTS_FILE = "results.csv"
 FIELDNAMES = ["timestamp", "trigger_type", "model", "prompt", "answer"]
 
 
-def ask_gemini(prompt: str) -> str:
-    for attempt in range(1, MAX_ATTEMPTS + 1):
-        response = requests.post(
-            URL,
-            params={"key": API_KEY},
-            json={"contents": [{"parts": [{"text": prompt}]}]},
-            timeout=30,
-        )
-        if response.status_code in (429, 503) and attempt < MAX_ATTEMPTS:
-            wait = RETRY_BACKOFF_SECONDS * attempt
-            print(f"Gemini returned {response.status_code}, retrying in {wait}s (attempt {attempt}/{MAX_ATTEMPTS})")
+def request_with_retry(make_request, provider_name: str, max_attempts: int, backoff_seconds: int) -> requests.Response:
+    for attempt in range(1, max_attempts + 1):
+        response = make_request()
+        if response.status_code in (429, 503) and attempt < max_attempts:
+            wait = backoff_seconds * attempt
+            print(f"{provider_name} returned {response.status_code}, retrying in {wait}s (attempt {attempt}/{max_attempts})")
             time.sleep(wait)
             continue
         break
@@ -48,12 +61,75 @@ def ask_gemini(prompt: str) -> str:
     try:
         response.raise_for_status()
     except requests.HTTPError:
-        # Never print the exception directly: it carries the full request
-        # URL, which contains the API key as a query param.
-        raise RuntimeError(f"Gemini API request failed with status {response.status_code}") from None
+        # Never print the exception directly: depending on the provider it
+        # can carry the full request URL or headers, which may include the
+        # API key.
+        raise RuntimeError(f"{provider_name} request failed with status {response.status_code}") from None
 
+    return response
+
+
+def ask_gemini(prompt: str) -> str:
+    def make_request():
+        return requests.post(
+            GEMINI_URL,
+            params={"key": GEMINI_API_KEY},
+            json={"contents": [{"parts": [{"text": prompt}]}]},
+            timeout=30,
+        )
+
+    response = request_with_retry(make_request, "Gemini", GEMINI_MAX_ATTEMPTS, GEMINI_RETRY_BACKOFF_SECONDS)
     data = response.json()
     return data["candidates"][0]["content"]["parts"][0]["text"]
+
+
+def ask_haiku(prompt: str) -> str:
+    def make_request():
+        return requests.post(
+            ANTHROPIC_URL,
+            headers={
+                "x-api-key": ANTHROPIC_API_KEY,
+                "anthropic-version": "2023-06-01",
+                "content-type": "application/json",
+            },
+            json={
+                "model": HAIKU_MODEL,
+                "max_tokens": 1024,
+                "messages": [{"role": "user", "content": prompt}],
+            },
+            timeout=30,
+        )
+
+    response = request_with_retry(make_request, "Claude Haiku", HAIKU_MAX_ATTEMPTS, HAIKU_RETRY_BACKOFF_SECONDS)
+    data = response.json()
+    return data["content"][0]["text"]
+
+
+def ask_openai(prompt: str) -> str:
+    def make_request():
+        return requests.post(
+            OPENAI_URL,
+            headers={
+                "Authorization": f"Bearer {OPENAI_API_KEY}",
+                "content-type": "application/json",
+            },
+            json={
+                "model": OPENAI_MODEL,
+                "messages": [{"role": "user", "content": prompt}],
+            },
+            timeout=30,
+        )
+
+    response = request_with_retry(make_request, "OpenAI", OPENAI_MAX_ATTEMPTS, OPENAI_RETRY_BACKOFF_SECONDS)
+    data = response.json()
+    return data["choices"][0]["message"]["content"]
+
+
+PROVIDERS = [
+    {"model": GEMINI_MODEL, "ask": ask_gemini, "delay_seconds": GEMINI_DELAY_SECONDS},
+    {"model": HAIKU_MODEL, "ask": ask_haiku, "delay_seconds": HAIKU_DELAY_SECONDS},
+    {"model": OPENAI_MODEL, "ask": ask_openai, "delay_seconds": OPENAI_DELAY_SECONDS},
+]
 
 
 def scheduled_row_exists(model: str, prompt: str, date_str: str) -> bool:
@@ -68,7 +144,7 @@ def scheduled_row_exists(model: str, prompt: str, date_str: str) -> bool:
     return False
 
 
-def save_result(prompt: str, answer: str, trigger_type: str) -> None:
+def save_result(model: str, prompt: str, answer: str, trigger_type: str) -> None:
     file_exists = os.path.exists(RESULTS_FILE)
     with open(RESULTS_FILE, "a", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=FIELDNAMES)
@@ -77,7 +153,7 @@ def save_result(prompt: str, answer: str, trigger_type: str) -> None:
         writer.writerow({
             "timestamp": datetime.now(timezone.utc).isoformat(),
             "trigger_type": trigger_type,
-            "model": MODEL,
+            "model": model,
             "prompt": prompt,
             "answer": answer,
         })
@@ -94,15 +170,18 @@ if __name__ == "__main__":
     today = datetime.now(timezone.utc).date().isoformat()
 
     for prompt in QUESTIONS:
-        if args.trigger_type == "scheduled" and scheduled_row_exists(MODEL, prompt, today):
-            print(f"scheduled row already exists for {today} / {MODEL} / {prompt}, skipping")
-            continue
+        for provider in PROVIDERS:
+            model = provider["model"]
 
-        try:
-            answer = ask_gemini(prompt)
-            save_result(prompt, answer, args.trigger_type)
-            print(f"Saved {args.trigger_type} response to {RESULTS_FILE} for: {prompt}")
-        except Exception as e:
-            print(f"failed to get a response for: {prompt} ({e})")
+            if args.trigger_type == "scheduled" and scheduled_row_exists(model, prompt, today):
+                print(f"scheduled row already exists for {today} / {model} / {prompt}, skipping")
+                continue
 
-        time.sleep(DELAY_SECONDS)
+            try:
+                answer = provider["ask"](prompt)
+                save_result(model, prompt, answer, args.trigger_type)
+                print(f"Saved {args.trigger_type} response from {model} to {RESULTS_FILE} for: {prompt}")
+            except Exception as e:
+                print(f"failed to get a response from {model} for: {prompt} ({e})")
+
+            time.sleep(provider["delay_seconds"])
