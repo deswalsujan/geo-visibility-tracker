@@ -9,32 +9,49 @@
 import argparse
 import csv
 import os
-import sys
+import time
 from datetime import datetime, timezone
 
 import requests
 from dotenv import load_dotenv
+
+from questions import QUESTIONS
 
 load_dotenv()
 
 API_KEY = os.environ["GEMINI_API_KEY"]
 MODEL = "gemini-3.6-flash"
 URL = f"https://generativelanguage.googleapis.com/v1beta/models/{MODEL}:generateContent"
-
-PROMPT = "What's the best cap table and equity management software for an early-stage startup?"
+DELAY_SECONDS = 8  # pause between questions, keeps sustained throughput well under Gemini Flash's free-tier rate limit
+MAX_ATTEMPTS = 3  # retries for a single question on 429/503 before giving up on it
+RETRY_BACKOFF_SECONDS = 5  # doubles each retry: 5s, then 10s
 
 RESULTS_FILE = "results.csv"
 FIELDNAMES = ["timestamp", "trigger_type", "model", "prompt", "answer"]
 
 
 def ask_gemini(prompt: str) -> str:
-    response = requests.post(
-        URL,
-        params={"key": API_KEY},
-        json={"contents": [{"parts": [{"text": prompt}]}]},
-        timeout=30,
-    )
-    response.raise_for_status()
+    for attempt in range(1, MAX_ATTEMPTS + 1):
+        response = requests.post(
+            URL,
+            params={"key": API_KEY},
+            json={"contents": [{"parts": [{"text": prompt}]}]},
+            timeout=30,
+        )
+        if response.status_code in (429, 503) and attempt < MAX_ATTEMPTS:
+            wait = RETRY_BACKOFF_SECONDS * attempt
+            print(f"Gemini returned {response.status_code}, retrying in {wait}s (attempt {attempt}/{MAX_ATTEMPTS})")
+            time.sleep(wait)
+            continue
+        break
+
+    try:
+        response.raise_for_status()
+    except requests.HTTPError:
+        # Never print the exception directly: it carries the full request
+        # URL, which contains the API key as a query param.
+        raise RuntimeError(f"Gemini API request failed with status {response.status_code}") from None
+
     data = response.json()
     return data["candidates"][0]["content"]["parts"][0]["text"]
 
@@ -76,10 +93,16 @@ if __name__ == "__main__":
     args = parse_args()
     today = datetime.now(timezone.utc).date().isoformat()
 
-    if args.trigger_type == "scheduled" and scheduled_row_exists(MODEL, PROMPT, today):
-        print(f"scheduled row already exists for {today} / {MODEL} / {PROMPT}, skipping")
-        sys.exit(0)
+    for prompt in QUESTIONS:
+        if args.trigger_type == "scheduled" and scheduled_row_exists(MODEL, prompt, today):
+            print(f"scheduled row already exists for {today} / {MODEL} / {prompt}, skipping")
+            continue
 
-    answer = ask_gemini(PROMPT)
-    save_result(PROMPT, answer, args.trigger_type)
-    print(f"Saved {args.trigger_type} response to {RESULTS_FILE}")
+        try:
+            answer = ask_gemini(prompt)
+            save_result(prompt, answer, args.trigger_type)
+            print(f"Saved {args.trigger_type} response to {RESULTS_FILE} for: {prompt}")
+        except Exception as e:
+            print(f"failed to get a response for: {prompt} ({e})")
+
+        time.sleep(DELAY_SECONDS)
