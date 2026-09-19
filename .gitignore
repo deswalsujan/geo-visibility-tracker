@@ -25,3 +25,6 @@ venv/
 
 # Claude Code local settings
 .claude/
+
+# Generated locally by parse_mentions.py, rebuilt from results.csv each run
+results.db
