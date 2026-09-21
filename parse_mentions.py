@@ -29,7 +29,7 @@ BRANDS = [
     "Vestd",
     "Qapita",
     "Cake Equity",
-    "Certent",
+    "Astrella",
 ]
 
 # How close a URL, markdown link, or bare domain has to be to a mention
