@@ -1,0 +1,699 @@
+id,date,model,brand,answer_text,human_mentioned
+954,2026-09-19,gpt-5.6-luna,Pulley,"Which **Pulley** do you mean—the startup/equity-management platform at **pulley.com**, or another company/product?
+
+If you mean the equity-management platform, I’m not aware of a confirmed company-wide shutdown announcement. Share the notice, email, or link you saw and I can help assess whether it indicates a shutdown, service interruption, or restructuring.",0
+20,2026-09-15,gemini-3.6-flash,Ledgy,"For an early-stage startup (pre-seed to Series A), the two clear market leaders are **Pulley** and **Carta**, with **AngelList Stack** as a strong contender for companies starting from scratch.
+
+Here is a breakdown of the best options depending on your startup’s specific situation:
+
+---
+
+### 1. **Pulley** – *Best Overall for Early-Stage Startups*
+Pulley has rapidly become the favorite cap table platform for Y Combinator startups and early-stage founders because it is fast, user-friendly, and transparently priced.
+
+* **Best for:** Founders who want a fast, cost-effective, and easy-to-use platform with great customer support.
+* **Pricing:** **Free** (Seed tier) for up to 25 stakeholders and $1M raised. Paid tiers start around $1,200/year, which includes discounted 409A valuations.
+* **Pros:**
+  * **Speed:** You can set up your cap table in under an hour.
+  * **Fundraising Tools:** Excellent scenario modeling tools (e.g., ""How much dilution will I take if I raise $2M on a SAFE?"").
+  * **Top-tier Support:** Customer service is fast and often helps clean up historical cap table mistakes.
+  * **409A Valuations:** Fast turnaround times and affordable.
+* **Cons:** Less recognized by legacy institutional VCs than Carta (though this gap is closing quickly).
+
+---
+
+### 2. **Carta** – *The Industry Standard (Best if backed by major VCs)*
+Carta is the ""gorilla in the room."" Almost every venture lawyer and investor is intimately familiar with it. 
+
+* **Best for:** Startups that have already raised significant venture capital, plan to scale very quickly, or have investors who explicitly demand Carta.
+* **Pricing:** **Carta Launch** is **Free** for up to 25 stakeholders and $1M in capital raised. After that, pricing escalates rapidly (often $3,000 to $8,000+/year).
+* **Pros:**
+  * **Network Effects:** Seamless for institutional investors to accept and manage shares in their existing Carta portfolios.
+  * **Ecosystem:** Offers a massive suite of tools for secondary sales, liquidity management, and fund administration.
+  * **Lawyer Preference:** Most Silicon Valley law firms prefer Carta because they use it daily.
+* **Cons:**
+  * **Price Hikes:** Once you outgrow the free tier, it becomes significantly more expensive than competitors.
+  * **Customer Service:** Can feel impersonal compared to newer players.
+
+---
+
+### 3. **AngelList Stack** – *Best ""All-in-One"" (Pre-Incorporation or Day 1)*
+If you haven't incorporated yet or are looking for a unified tool for banking, incorporation, equity, and fundraising, AngelList Stack is a compelling choice.
+
+* **Best for:** First-time founders who want a single dashboard for Incorporation + Banking + Cap Table + SAFEs.
+* **Pricing:** Varies, but highly competitive for early-stage bundled services.
+* **Pros:**
+  * Seamless integration between your corporate bank account, roll-up vehicles (RUVs), and cap table.
+  * Easy to issue SAFEs and accept money instantly.
+* **Cons:**
+  * Locks you into the AngelList ecosystem. Harder to migrate away later if you want custom banking or legal setups.
+
+---
+
+### 4. **LTSE Equity (formerly Captable.io)** – *Best Bootstrapped / Free Option*
+Created by the Long-Term Stock Exchange, LTSE Equity is built specifically to remain simple and low-cost.
+
+* **Best for:** Bootstrapped or self-funded startups looking for a basic, no-frills tool to track equity without paying software subscriptions.
+* **Pricing:** Generous free tier (up to 25 stakeholders), then ~$50/month.
+* **Pros:** Very intuitive, free/cheap, great for basic dilution modeling.
+* **Cons:** Lacks advanced compliance, stock option exercise flows, and integrated 409A valuation services compared to Pulley or Carta.
+
+---
+
+### Summary Recommendation: Which should you pick?
+
+1. **Pick Pulley if:** You are early-stage, want a modern platform, need affordable 409A valuations, and value fast, human customer support. *(This is the top choice for most 2024–2025 early-stage startups).*
+2. **Pick Carta Launch if:** You are raising from top-tier institutional VCs (like Sequoia, A16Z) who heavily prefer Carta, and you don't mind paying higher costs down the road.
+3. **Pick AngelList Stack if:** You haven't incorporated yet and want a single platform to handle legal incorporation, banking, and cap table setup all at once.",0
+1585,2026-09-20,gemini-3.6-flash,Carta,"It depends on which company named ""Pulley"" you are referring to, as there are two well-known software products with that name:
+
+### 1. Pulley (Cap Table & Equity Management Platform) — **NO, NOT SHUTTING DOWN**
+If you are referring to **Pulley (pulley.com)**, the startup equity management platform that competes with Carta and Shareworks:
+* **Status:** **Active and growing.** 
+* Pulley is very much open for business. In fact, the company experienced significant growth in early 2024 following controversies surrounding its competitor, Carta, which led many startups to migrate their cap tables over to Pulley.
+
+### 2. Pulley App (Digital Download Sales Service) — **YES, SHUT DOWN**
+If you are referring to **Pulley (pulleyapp.com)**, the older micro-service used by creators to sell digital products (e-books, music, software) online:
+* **Status:** **Discontinued.** 
+* This service was sunset and is no longer operational. 
+
+---
+
+*If you are an equity customer on **pulley.com** and heard a rumor about a shutdown, it is false—the platform is fully operational.*",1
+1770,2026-09-21,gpt-5.6-luna,Pulley,"Equity management software typically costs:
+
+- **Basic cap-table tools:** Free to **$1,000–$3,000 per year**
+- **Startup/private-company platforms:** **$2,000–$15,000 per year**
+- **Growing companies with employee equity administration:** **$10,000–$50,000+ per year**
+- **Enterprise or public-company equity administration:** **$50,000–$250,000+ per year**, usually custom-priced
+
+Pricing may be based on company size, number of shareholders or equity holders, funding stage, valuation or reporting features, and integrations. Many vendors also charge separately for:
+
+- Initial setup or migration: **$1,000–$10,000+**
+- 409A valuations or tax services
+- Payroll, accounting, and HR integrations
+- Tender offers, option exercises, or transaction support
+- Managed administration and compliance services
+
+For a typical venture-backed startup, budgeting roughly **$3,000–$12,000 annually** for software is a reasonable starting estimate, excluding valuations and specialized services.",0
+975,2026-09-19,claude-haiku-4-5-20251001,Cake Equity,"# Carta Alternatives After Pulley's Shutdown
+
+Several solid options have emerged:
+
+## Strong Competitors
+
+**Pulley's Replacement (Likely Carta)**
+- Pulley users are being migrated to Carta, so that's the default path
+- But if you want alternatives:
+
+**Vested**
+- Purpose-built for equity management
+- Good UX for option tracking and valuation
+- Simpler than Carta for smaller companies
+
+**Gust (formerly eShares, then Carta)**
+- Long history in the space
+- Still maintained as a separate product line
+
+**Shareworks (Morgan Stanley)**
+- Enterprise-focused
+- Strong for larger companies
+
+## Lighter-Weight Options
+
+**Pulley alternative stack** (instead of all-in-one):
+- **Plan.com** or **Cake Equity** for cap table management
+- **Vestwell** or **Carta** for option exercises
+- Spreadsheet templates for smaller teams
+
+## Selection Tips
+
+- **Size matters**: Early-stage startups may not need Carta's full feature set
+- **Integration needs**: Check what connects to your payroll/HR systems
+- **Cost**: Verify pricing per equity holder or flat rate
+- **Data export**: Important for portability given Pulley's transition
+
+What stage is your company? That would help narrow down which actually fits your needs versus the enterprise-grade overkill many startups don't need.",1
+460,2026-09-19,gemini-3.6-flash,Ledgy,"Equity management software (cap table management) generally costs anywhere from **$0 to over $30,000 per year**, depending on the size of your company, the number of stakeholders (employees, investors, advisors), and your funding stage. 
+
+For a typical venture-backed startup with 20 to 100 employees, the average annual cost falls between **$2,000 and $8,000 per year**.
+
+Here is a detailed breakdown of pricing based on company stage, vendors, and add-on costs.
+
+---
+
+### 1. Cost Breakdown by Company Stage
+
+Most providers price their platforms based on the **number of stakeholders** on your cap table or your **funding raised**.
+
+| Company Stage | Stakeholders / Size | Typical Annual Cost | Key Needs |
+| :--- | :--- | :--- | :--- |
+| **Bootstrapped / Pre-Seed** | 1 – 15 stakeholders | **$0 – $1,000 / year** | Basic cap table, issuing initial shares, SAFEs. |
+| **Seed Stage** | 15 – 50 stakeholders | **$1,200 – $3,500 / year** | Option grants, basic 409A valuations, HRIS sync. |
+| **Series A & B** | 50 – 200 stakeholders | **$4,000 – $12,000 / year** | Annual 409A valuations, ASC 718 compliance, exercise modeling. |
+| **Late-Stage / Pre-IPO** | 200+ stakeholders | **$15,000 – $50,000+ / year** | Tender offers, secondary market liquidity, custom API access, complex equity structures. |
+
+---
+
+### 2. Vendor Price Comparison
+
+Here is how the top players in the market structure their pricing:
+
+*   **Carta (Industry Leader):**
+    *   *Free Tier:* Free for companies with under $1M raised and under 25 stakeholders.
+    *   *Paid Tiers:* Starts around **$2,500 to $3,000/year** for early-stage companies, but rapidly scales up. Growth and late-stage companies typically pay **$8,000 to $25,000+/year**.
+*   **Pulley (Popular Carta Alternative):**
+    *   *Free Tier:* Free for up to 25 stakeholders.
+    *   *Paid Tiers:* ""Seed"" plan starts at **$1,200/year**. ""Growth"" plans range from **$3,500 to $8,000+/year** depending on stakeholder count.
+*   **AngelList Stack:**
+    *   Bundles equity management with banking and incorporation. Often costs around **$2,000/year** (or a percentage of funds raised via their platform).
+*   **Cake Equity / Ledgy / Captable.io:**
+    *   Often cater to lower budgets or international startups. Paid tiers generally start at **$600 to $1,500/year**.
+*   **Morgan Stanley Shareworks / Astrella:**
+    *   Targeted toward mid-market to enterprise companies. Pricing is custom but generally starts at **$5,000+ per year**.
+
+---
+
+### 3. Hidden Costs & Add-Ons to Watch For
+
+When budgeting, be aware that the base software subscription often excludes critical services:
+
+1.  **409A Valuations:** 
+    *   Private US companies need a 409A valuation annually (or after major funding rounds) to issue stock options legally.
+    *   *Cost:* **$1,000 – $3,000 per valuation** if purchased standalone. Some higher-tier software plans include this for free, but cheaper tiers charge extra.
+2.  **Implementation / Setup Fees:**
+    *   One-time onboarding fees to migrate your cap table from Excel or another provider.
+    *   *Cost:* **$500 – $2,500** (sometimes waived during sales negotiations).
+3.  **Secondary Transactions / Liquidity Events:**
+    *   If you run a tender offer or employee share buyback using the software, platforms usually charge a fee.
+    *   *Cost:* Often **1% to 3%** of the total transaction volume.
+4.  **ASC 718 Expense Reporting:**
+    *   Required for GAAP financial auditing as you grow. 
+    *   *Cost:* Sometimes locked behind enterprise plans that cost **$2,000+ more per year**.
+
+### Summary Recommendation
+*   **If you have under 25 stakeholders:** Use **Pulley** or **Carta’s free tier**. 
+*   **If you are Series A–B ($2M–$10M raised):** Budget roughly **$3,000 to $6,000/year** and make sure your plan includes 409A valuations.",1
+393,2026-09-18,claude-haiku-4-5-20251001,Carta,"# Cap Table Software Security: Real Assessment
+
+## Generally solid, but with important caveats
+
+**Strengths:**
+- Reputable platforms (Carta, Pulley, Captable.io) use encryption at rest and in transit
+- Access controls and permission hierarchies are standard
+- Regular security audits are typical for Series A+ funded companies
+- Better than spreadsheets (no accidental sharing, version control)
+
+**Real vulnerabilities to consider:**
+
+- **You still depend on the vendor's security practices** — their breaches affect you
+- **Access control creep** — employees leave, but access doesn't always get revoked promptly
+- **Integration risks** — connecting to accounting/payroll software creates new attack surface
+- **Insider risk** — employees with legitimate access can still export/misuse data
+- **Compliance gaps** — smaller platforms may skip SOC 2 compliance or security updates
+
+## Practical security approach
+
+1. **Vet the vendor** — check SOC 2 Type II reports, breach history, their security page
+2. **Limit access ruthlessly** — not everyone needs full visibility
+3. **Assume it could be breached** — cap tables aren't suitable for your most sensitive data (like board discussions about sales terms)
+4. **Use strong authentication** — enable SSO/2FA if available
+5. **Keep backups** — ideally in a separate system you control
+
+**The honest take:** Cap table software is significantly more secure than spreadsheets for day-to-day use, but it's still holding very valuable information. It's a calculated risk, not perfect security.
+
+What's your main concern — vendor reliability, employee access, or something else?",1
+223,2026-09-18,claude-haiku-4-5-20251001,Cake Equity,"# Best Options for Bootstrapped Startups
+
+**Most practical choice: Spreadsheets + basic tools**
+- Google Sheets templates work surprisingly well for small teams (under 20 people)
+- Free tier of Pulley or Carta covers basics without commitment
+- Honest advantage: you'll actually understand your cap table
+
+**If you want lightweight software:**
+- **Pulley** - Free tier is generous, clean interface
+- **Captable.io** - Simple, affordable ($50-100/month)
+- **Cake Equity** - Streamlined for small rounds
+
+**Reality check:**
+- Most bootstrapped startups don't need fancy software until Series A
+- The expensive platforms (Carta, eShares) make sense when you have employees, investors, or multiple rounds
+- Manual tracking actually forces you to learn your cap table deeply—valuable knowledge
+
+**What matters more than software:**
+- Consistent vesting schedules defined upfront
+- Documentation (even informal) of who owns what
+- Regular updates (quarterly minimum)
+- Clear communication with team members
+
+**My suggestion:** Start with a well-organized spreadsheet or Pulley's free tier. Spend your money on things that directly drive revenue. You can migrate later without much friction when you fundraise or grow.
+
+What's your current team size? That might help narrow it down further.",1
+1731,2026-09-21,gemini-3.6-flash,EquityList,"Yes, there are several **free cap table management tools** available for early-stage startups. Most major platforms offer a **""Free Tier""** designed for pre-seed or seed-stage startups, hoping you will upgrade to a paid plan as you raise money and hire employees.
+
+Here is a breakdown of the best free cap table tools available right now:
+
+---
+
+### 1. **Carta Launch** (Best Industry Standard)
+Carta is the most widely recognized platform in the startup ecosystem. Their free plan, **Carta Launch**, is tailored for very early-stage companies.
+* **Free Limit:** Up to **$1M raised** AND under **25 stakeholders** (investors, employees, founders).
+* **Key Features:** Electronic equity issuance, SAFEs/Convertible Notes tracking, basic scenario modeling, and automated cap table updates.
+* **Why choose it:** Investors and lawyers are extremely familiar with Carta, making fundraising and onboarding seamless.
+
+### 2. **Pulley** (Best User Experience & Speed)
+Pulley is a major competitor to Carta, known for its fast setup, clean UI, and great customer support.
+* **Free Limit:** Up to **25 stakeholders** (no hard cap on funding raised on the free tier, though features are basic).
+* **Key Features:** Interactive fundraising modeling, token/crypto support, SAFE management, and stakeholder portals.
+* **Why choose it:** It's extremely easy to use, and moving to their paid tier later is often cheaper than Carta.
+
+### 3. **LTSE Equity** (formerly Captable.io)
+LTSE Equity was built specifically to offer a robust, founder-friendly free cap table tool.
+* **Free Limit:** Free for up to **25 stakeholders**.
+* **Key Features:** Round modeling, ""what-if"" payout calculators, waterfall analysis, and easy compliance tracking.
+* **Why choose it:** It offers some advanced modeling features on its free tier that other platforms lock behind paywalls.
+
+### 4. **Cake Equity**
+Cake Equity is an increasingly popular global platform, especially strong for international teams (US, UK, Australia, Singapore, etc.).
+* **Free Limit:** Free for up to **26 stakeholders**.
+* **Key Features:** Option plan management, global equity compliance, investor updates.
+* **Why choose it:** Great if you have a distributed/remote team across multiple countries.
+
+---
+
+### 5. **DIY Option: Google Sheets / Excel Templates**
+If you are at the absolute idea stage (just 2–3 founders with simple equity splits), a dedicated platform might be overkill. You can use free templates:
+* **Y Combinator Cap Table Template:** Simple, clean, and trusted by thousands of founders.
+* **S3 Ventures Cap Table Template:** Great for modeling future priced rounds and SAFEs.
+
+*⚠️ **Warning on Spreadsheets:** While free, manual spreadsheets are prone to human formula errors. Switch to software as soon as you start issuing SAFEs, options, or taking outside capital.*
+
+---
+
+### Summary Recommendation:
+
+1. **If you plan to raise VC money soon:** Go with **Carta Launch** or **Pulley**.
+2. **If you want powerful scenario modeling for free:** Try **LTSE Equity**.
+3. **If you have a global team:** Try **Cake Equity**.
+4. **If it’s just 2 co-founders on Day 1:** Start with a **Google Sheet**.",0
+1041,2026-09-19,claude-haiku-4-5-20251001,Carta,"# Cap Table Software Security: A Realistic Assessment
+
+## Generally solid, but nuanced
+
+**Strong points:**
+- Most reputable platforms (Carta, Pulley, Captable.io) use encryption in transit/at rest and SOC 2 compliance
+- Access controls and permission systems are standard
+- Better than spreadsheets, which are vulnerable to accidental sharing and versioning chaos
+
+**Real vulnerabilities:**
+- **Your team remains the weakest link** — employees with access can still leak data, share passwords, or download and forward files
+- **Integrations expand attack surface** — connecting to banking, accounting, or investor portals creates additional entry points
+- **Vendor risk** — a breach at the platform itself would be serious. Not all vendors are equally hardened
+- **Data residency** — where data sits matters for compliance requirements you may have
+
+## What actually matters for your situation:
+
+1. **Who needs access?** More users = higher risk of carelessness
+2. **Your data sensitivity level** — early stage with 5 founders is different from late-stage with 200 shareholders
+3. **Compliance requirements** — regulated industries or international operations add constraints
+4. **Vendor stability** — is this a company likely to exist in 10 years?
+
+## Practical steps:
+
+- Check their security certifications before signing
+- Audit who actually has access quarterly
+- Use SSO if available (reduces password reuse)
+- Understand their data retention/deletion policies
+- Keep a backup copy separately stored (reduces dependency risk)
+
+What's your main concern — accidental internal leaks or external breach risk?",1
+1088,2026-09-20,gemini-3.6-flash,Astrella,"Yes, there are several **free cap table management tools** specifically designed for early-stage startups. Most major platforms offer a free tier to get young startups onboarded early, with the expectation that you will upgrade to a paid plan once you raise a significant round of funding or grow your team.
+
+Here are the best free cap table management options currently available:
+
+---
+
+### 1. Carta Launch
+* **Free Tier Limit:** Free for startups that have raised **less than $1M** and have **fewer than 25 stakeholders**.
+* **Best For:** Startups that want the industry-standard platform from day one.
+* **Key Features:**
+  * Issuing digital SAFEs and convertible notes.
+  * Equity tracking and electronic stock certificate issuance.
+  * Form 83(b) election tracking.
+* **Catch:** Once you exceed $1M raised or 25 stakeholders, Carta becomes one of the more expensive tools on the market.
+
+### 2. Pulley (Seed Plan)
+* **Free Tier Limit:** Free up to **25 stakeholders** (no strict funding limit on the free tier, though advanced features require a paid plan).
+* **Best For:** Founders who want a fast, clean interface and top-tier customer support.
+* **Key Features:**
+  * Fast SAFE issuance and signature collection.
+  * ""What-if"" fundraising modeling (dilution calculators).
+  * Smooth onboarding and easy migration.
+* **Catch:** Advanced features like 409A valuations and complex option pool management require upgrading.
+
+### 3. LTSE Equity (formerly Captable.io)
+* **Free Tier Limit:** Free for up to **25 stakeholders**.
+* **Best For:** Founders who want strong, built-in financial modeling and scenario planning.
+* **Key Features:**
+  * Round modeling and exit waterfalls included in early tiers.
+  * Easy-to-use interface.
+  * Clean reporting for investors.
+* **Catch:** Less widely integrated with legal firms compared to Carta, but very founder-friendly.
+
+### 4. AngelList Stack
+* **Free Tier Limit:** Free cap table management for early-stage companies (especially if incorporated via AngelList or under certain stakeholder/funding caps).
+* **Best For:** Startups planning to incorporate, raise money, or hire using the AngelList ecosystem.
+* **Key Features:**
+  * Seamless integration with roll-up vehicles (RUVs) and investor syndicates.
+  * Automated SAFE management.
+  * Integrated banking and incorporation options.
+
+### 5. Cake Equity
+* **Free Tier Limit:** Free for up to **5 to 10 stakeholders** (varies by region/promotion).
+* **Best For:** Global or remote-first startups hiring across borders.
+* **Key Features:**
+  * Handles international employee stock option plans (ESOPs) well.
+  * Easy option grant workflows.
+
+---
+
+### Alternative: Google Sheets / Excel
+If you are pre-funding, have only 2–3 founders, and haven't issued equity or SAFEs to external investors yet, a spreadsheet is still the simplest option.
+
+* **Pros:** 100% free forever, total control.
+* **Cons:** Prone to human error, lacks legal e-signatures, and doesn't scale well once you issue SAFEs or option pools.
+* **Free Templates:** You can find free, reputable startup cap table templates from **Y Combinator**, **S3 Ventures**, or **Coates Counsel**.
+
+---
+
+### Which one should you choose?
+
+* **Go with Carta Launch** if you plan to raise institutional VC money soon and want the tool most investors and lawyers are already familiar with.
+* **Go with Pulley** if you prioritize a fast, simple user experience and great customer service.
+* **Go with LTSE Equity** if you want deep scenario planning and dilution modeling without paying extra.
+
+**Pro-Tip:** Before signing up, ask your startup attorney which platform they prefer. Many legal firms have streamlined workflows with specific tools (like Carta or Pulley), which can save you legal fees down the line.",0
+1140,2026-09-20,claude-haiku-4-5-20251001,Ledgy,"# Affordable Cap Table Options for Early-Stage Startups
+
+**Free or near-free:**
+- **Pulley** – free tier covers up to 20 stakeholders
+- **Carta** – free basic version (though they upsell aggressively)
+- **Google Sheets/Excel templates** – actually viable if you keep it simple; many founders use these initially
+
+**Low-cost paid tiers ($0-100/month):**
+- **Pulley** – ~$50/month for more features
+- **Ledgy** – reasonable pricing; straightforward interface
+- **Vesting.com** – simple, affordable option
+
+**Reality check:**
+- Most cap table software is genuinely cheap relative to your funding needs
+- The free tiers are usually sufficient until Series A
+- You'll outgrow spreadsheets eventually, but not immediately
+- Pick based on *when you'll need features* (vesting schedules, 409A valuations, investor reporting), not just price
+
+**My take:** Start with Google Sheets or a free tier. Migrate to paid software when you have 50+ stakeholders, employee vesting complexity, or investor demands. Don't let software choice be a blocker—your cap table's *accuracy* matters more than the tool.
+
+What stage are you at? That might help narrow down what features you actually need now vs. later.",1
+29,2026-09-16,gemini-3.6-flash,Vestd,"For an early-stage startup, the ""best"" cap table software depends on your budget, whether you have international employees, and how quickly you plan to raise venture capital. 
+
+Currently, **Pulley** is the top overall recommendation for early-stage startups, but a few other options excel depending on your specific situation.
+
+Here is a breakdown of the top cap table and equity management platforms for early-stage companies in 2024:
+
+---
+
+### 1. **Pulley** – *Best Overall for Early-Stage Startups*
+Pulley was built specifically to challenge Carta by focusing on early-stage founders. It is fast, intuitive, and offers transparent pricing.
+
+* **Why it’s great:** 
+  * **Founder-friendly interface:** Extremely easy to model fundraising rounds, issue SAFEs, and grant employee stock options.
+  * **Fast 409A Valuations:** Known for having some of the fastest turnaround times in the industry for 409A valuations (often within days).
+  * **Transparent Pricing:** Offers a generous free tier for early-stage companies.
+* **Pricing:** Free for up to 25 stakeholders (or under $1M raised). Paid plans start around $1,200/year (which includes 409A valuations).
+* **Best for:** Seed and Pre-Seed startups that want an easy-to-use platform that grows with them.
+
+---
+
+### 2. **Carta** – *The VC Standard (Best if heavily VC-Backed)*
+Carta is the market leader and the ""gold standard"" for institutional venture capitalists. 
+
+* **Why it’s great:** 
+  * **Investor preferred:** Almost every VC firm uses Carta, making board approvals, investor reporting, and due diligence frictionless.
+  * **Deep ecosystem:** Handles everything from cap tables and 409As to tax forms (83b elections), liquidity events, and fund administration.
+* **Drawbacks:** Pricing scales up significantly as you grow, and smaller startups sometimes complain about customer support responsiveness compared to boutique rivals.
+* **Pricing:** Offers a **Carta Launch** plan which is **free** for startups with under $1M raised and fewer than 25 stakeholders. After that, paid tiers can get expensive ($2,000–$8,000+/year).
+* **Best for:** Startups planning a aggressive venture-backed trajectory (Series A and beyond) that want to start on the platform they’ll likely use forever.
+
+---
+
+### 3. **AngelList Equity** – *Best Free Tier & Best for AngelList Users*
+AngelList expanded its ecosystem to offer full cap table management, integrated seamlessly with its fundraising tools.
+
+* **Why it’s great:** 
+  * **Highly cost-effective:** Extremely generous free tier compared to competitors.
+  * **Fundraising integration:** If you raise via AngelList Roll Up Vehicles (RUVs) or syndicates, the cap table updates automatically.
+  * **Automated 83(b) filings:** Makes early founder equity grants and tax filings painless.
+* **Pricing:** **Free** for startups with up to 100 stakeholders and under $4M raised (one of the best free limits in the market).
+* **Best for:** Bootstrapped, pre-seed, or angel-backed startups looking to minimize burn rate.
+
+---
+
+### 4. **Cake Equity** – *Best for International / Global Teams*
+If your startup is hiring employees outside the US and wants to issue global equity, Cake is designed specifically for cross-border stock options.
+
+* **Why it’s great:** 
+  * **Global compliance:** Simplifies the legal legalities of issuing options to contractors or employees in the UK, Australia, LATAM, Europe, and the US.
+  * **Ultra-simple UX:** Very straightforward onboarding for non-lawyers.
+* **Pricing:** Free tier available for small teams; flexible pay-as-you-grow plans.
+* **Best for:** Remote-first or international startups with employees distributed across multiple countries.
+
+---
+
+### How to Choose: Decision Matrix
+
+| Your Situation | Recommended Software | Why? |
+| :--- | :--- | :--- |
+| **Just raised a pre-seed / seed round (<$1M)** | **Pulley** or **AngelList** | Free tiers, fast setup, low maintenance. |
+| **Raising from top-tier VCs immediately** | **Carta** | VCs prefer it; zero friction during due diligence. |
+| **Hiring remote employees globally** | **Cake Equity** | Handles international equity legalities seamlessly. |
+| **Zero budget, super simple cap table** | **AngelList** (or Excel) | Generous 100-stakeholder free tier. |
+
+---
+
+### Pro-Tip for Founders:
+* **Don't pay too early:** Utilize the **free tiers** (Carta Launch, Pulley Free, or AngelList) as long as you qualify (usually until you hit 25 stakeholders or raise >$1M).
+* **Wait until you need a 409A Valuation:** You generally don't need to pay for a premium plan until you are ready to issue formal **stock options** to employees, which requires an official 409A valuation. If you only have founders and SAFEs, a free plan or basic cap table is sufficient.",0
+448,2026-09-19,claude-haiku-4-5-20251001,Astrella,"# Free Cap Table Tools for Startups
+
+Yes, several options exist:
+
+## Fully Free Tools
+- **Pulley** - Offers a free tier with basic cap table functionality
+- **Carta** - Free for early-stage companies (though limited features vs. paid)
+- **Gust** - Some free cap table features
+- **Spreadsheet templates** - Many investors/lawyers share free Excel/Google Sheets templates
+
+## Freemium Models
+Most cap table tools use freemium pricing, so you can start free but hit limits on:
+- Number of shareholders
+- Scenario modeling
+- Advanced features
+
+## Practical Considerations
+- **Free tiers often have restrictions** on cap size, shareholder count, or features
+- **When to upgrade**: Usually when raising funding or getting complex (multiple rounds, employee options, etc.)
+- **DIY option**: A well-organized Google Sheet works initially, though doesn't scale well
+
+## My Suggestion
+Start with a free tool or template to validate you need it, then upgrade when:
+- You're fundraising
+- You have 20+ stakeholders
+- You need scenario modeling
+
+The right choice depends on your complexity level. What stage are you at?",0
+1751,2026-09-21,gpt-5.6-luna,Cake Equity,"Yes. Several platforms offer free or limited-free cap table management for early-stage startups:
+
+| Tool | Free offering | Best for |
+|---|---|---|
+| **Carta Launch** | Basic cap table and equity administration; limits may apply | U.S. startups wanting a well-known platform |
+| **Cake** | Free basic cap table management, including founder equity and some financing instruments | Very early-stage companies |
+| **Pulley** | Free tier for qualifying small startups; limits depend on company size/funding | Startups wanting a modern, simple interface |
+| **Eqvista** | Limited free plan for basic cap table administration | Small companies with straightforward ownership |
+
+Free plans commonly exclude or limit:
+
+- 409A valuations
+- Legal document preparation
+- Tax filings and compliance
+- Complex option plans
+- Advanced reporting and integrations
+- Large numbers of shareholders or entities
+
+For a startup with only founders and a few SAFEs, **Carta Launch, Cake, or Pulley** are usually the first tools worth comparing. Avoid relying solely on a spreadsheet once you issue options, SAFEs, or multiple classes of shares. Pricing and eligibility change frequently, so verify the current free-tier limits before choosing.",1
+2234,2026-09-21,gemini-3.6-flash,Pulley,"**No, Pulley is not shutting down.** 
+
+If you are referring to **Pulley (pulley.com)**, the popular equity and cap table management platform for startups:
+* It is fully operational, well-funded, and actively growing.
+* It recently experienced significant growth as a major alternative to competitors like Carta.
+
+If you are referring to a different tool named Pulley (such as **PulleyApp**, the older digital download service for e-commerce), please clarify which specific service or app you are asking about, as smaller tools with similar names may have changed or sunsetted over time.",1
+1733,2026-09-21,gemini-3.6-flash,Vestd,"Yes, there are several **free cap table management tools** available for early-stage startups. Most major platforms offer a **""Free Tier""** designed for pre-seed or seed-stage startups, hoping you will upgrade to a paid plan as you raise money and hire employees.
+
+Here is a breakdown of the best free cap table tools available right now:
+
+---
+
+### 1. **Carta Launch** (Best Industry Standard)
+Carta is the most widely recognized platform in the startup ecosystem. Their free plan, **Carta Launch**, is tailored for very early-stage companies.
+* **Free Limit:** Up to **$1M raised** AND under **25 stakeholders** (investors, employees, founders).
+* **Key Features:** Electronic equity issuance, SAFEs/Convertible Notes tracking, basic scenario modeling, and automated cap table updates.
+* **Why choose it:** Investors and lawyers are extremely familiar with Carta, making fundraising and onboarding seamless.
+
+### 2. **Pulley** (Best User Experience & Speed)
+Pulley is a major competitor to Carta, known for its fast setup, clean UI, and great customer support.
+* **Free Limit:** Up to **25 stakeholders** (no hard cap on funding raised on the free tier, though features are basic).
+* **Key Features:** Interactive fundraising modeling, token/crypto support, SAFE management, and stakeholder portals.
+* **Why choose it:** It's extremely easy to use, and moving to their paid tier later is often cheaper than Carta.
+
+### 3. **LTSE Equity** (formerly Captable.io)
+LTSE Equity was built specifically to offer a robust, founder-friendly free cap table tool.
+* **Free Limit:** Free for up to **25 stakeholders**.
+* **Key Features:** Round modeling, ""what-if"" payout calculators, waterfall analysis, and easy compliance tracking.
+* **Why choose it:** It offers some advanced modeling features on its free tier that other platforms lock behind paywalls.
+
+### 4. **Cake Equity**
+Cake Equity is an increasingly popular global platform, especially strong for international teams (US, UK, Australia, Singapore, etc.).
+* **Free Limit:** Free for up to **26 stakeholders**.
+* **Key Features:** Option plan management, global equity compliance, investor updates.
+* **Why choose it:** Great if you have a distributed/remote team across multiple countries.
+
+---
+
+### 5. **DIY Option: Google Sheets / Excel Templates**
+If you are at the absolute idea stage (just 2–3 founders with simple equity splits), a dedicated platform might be overkill. You can use free templates:
+* **Y Combinator Cap Table Template:** Simple, clean, and trusted by thousands of founders.
+* **S3 Ventures Cap Table Template:** Great for modeling future priced rounds and SAFEs.
+
+*⚠️ **Warning on Spreadsheets:** While free, manual spreadsheets are prone to human formula errors. Switch to software as soon as you start issuing SAFEs, options, or taking outside capital.*
+
+---
+
+### Summary Recommendation:
+
+1. **If you plan to raise VC money soon:** Go with **Carta Launch** or **Pulley**.
+2. **If you want powerful scenario modeling for free:** Try **LTSE Equity**.
+3. **If you have a global team:** Try **Cake Equity**.
+4. **If it’s just 2 co-founders on Day 1:** Start with a **Google Sheet**.",0
+537,2026-09-19,claude-haiku-4-5-20251001,Carta,"# Pulley vs Ledgy
+
+Both are equity management platforms for startups, but they differ in focus:
+
+## **Pulley**
+- **Strong suit**: Cap table management and fundraising
+- More comprehensive cap table features
+- Better for handling complex equity scenarios
+- Stronger investor/board coordination tools
+- Good integration with fundraising workflows
+
+## **Ledgy**
+- **Strong suit**: Employee equity & engagement
+- More streamlined, user-friendly interface
+- Better for making equity transparent to employees
+- Stronger global/international support
+- More focused on equity communication and motivation
+
+## **In Practice**
+- **Choose Pulley** if you need detailed cap table control, are actively fundraising, or have complex equity structures
+- **Choose Ledgy** if you prioritize employee communication, want simplicity, or are pre-seed/early-stage
+
+## **Other Factors**
+- Pricing models differ (Pulley is typically pricier)
+- Ledgy tends to have better UX for non-technical users
+- Pulley integrates better with investor tools
+
+The best choice depends on whether you need to optimize for **investor relations** (Pulley) or **employee engagement** (Ledgy).",0
+463,2026-09-19,gemini-3.6-flash,Cake Equity,"Equity management software (cap table management) generally costs anywhere from **$0 to over $30,000 per year**, depending on the size of your company, the number of stakeholders (employees, investors, advisors), and your funding stage. 
+
+For a typical venture-backed startup with 20 to 100 employees, the average annual cost falls between **$2,000 and $8,000 per year**.
+
+Here is a detailed breakdown of pricing based on company stage, vendors, and add-on costs.
+
+---
+
+### 1. Cost Breakdown by Company Stage
+
+Most providers price their platforms based on the **number of stakeholders** on your cap table or your **funding raised**.
+
+| Company Stage | Stakeholders / Size | Typical Annual Cost | Key Needs |
+| :--- | :--- | :--- | :--- |
+| **Bootstrapped / Pre-Seed** | 1 – 15 stakeholders | **$0 – $1,000 / year** | Basic cap table, issuing initial shares, SAFEs. |
+| **Seed Stage** | 15 – 50 stakeholders | **$1,200 – $3,500 / year** | Option grants, basic 409A valuations, HRIS sync. |
+| **Series A & B** | 50 – 200 stakeholders | **$4,000 – $12,000 / year** | Annual 409A valuations, ASC 718 compliance, exercise modeling. |
+| **Late-Stage / Pre-IPO** | 200+ stakeholders | **$15,000 – $50,000+ / year** | Tender offers, secondary market liquidity, custom API access, complex equity structures. |
+
+---
+
+### 2. Vendor Price Comparison
+
+Here is how the top players in the market structure their pricing:
+
+*   **Carta (Industry Leader):**
+    *   *Free Tier:* Free for companies with under $1M raised and under 25 stakeholders.
+    *   *Paid Tiers:* Starts around **$2,500 to $3,000/year** for early-stage companies, but rapidly scales up. Growth and late-stage companies typically pay **$8,000 to $25,000+/year**.
+*   **Pulley (Popular Carta Alternative):**
+    *   *Free Tier:* Free for up to 25 stakeholders.
+    *   *Paid Tiers:* ""Seed"" plan starts at **$1,200/year**. ""Growth"" plans range from **$3,500 to $8,000+/year** depending on stakeholder count.
+*   **AngelList Stack:**
+    *   Bundles equity management with banking and incorporation. Often costs around **$2,000/year** (or a percentage of funds raised via their platform).
+*   **Cake Equity / Ledgy / Captable.io:**
+    *   Often cater to lower budgets or international startups. Paid tiers generally start at **$600 to $1,500/year**.
+*   **Morgan Stanley Shareworks / Astrella:**
+    *   Targeted toward mid-market to enterprise companies. Pricing is custom but generally starts at **$5,000+ per year**.
+
+---
+
+### 3. Hidden Costs & Add-Ons to Watch For
+
+When budgeting, be aware that the base software subscription often excludes critical services:
+
+1.  **409A Valuations:** 
+    *   Private US companies need a 409A valuation annually (or after major funding rounds) to issue stock options legally.
+    *   *Cost:* **$1,000 – $3,000 per valuation** if purchased standalone. Some higher-tier software plans include this for free, but cheaper tiers charge extra.
+2.  **Implementation / Setup Fees:**
+    *   One-time onboarding fees to migrate your cap table from Excel or another provider.
+    *   *Cost:* **$500 – $2,500** (sometimes waived during sales negotiations).
+3.  **Secondary Transactions / Liquidity Events:**
+    *   If you run a tender offer or employee share buyback using the software, platforms usually charge a fee.
+    *   *Cost:* Often **1% to 3%** of the total transaction volume.
+4.  **ASC 718 Expense Reporting:**
+    *   Required for GAAP financial auditing as you grow. 
+    *   *Cost:* Sometimes locked behind enterprise plans that cost **$2,000+ more per year**.
+
+### Summary Recommendation
+*   **If you have under 25 stakeholders:** Use **Pulley** or **Carta’s free tier**. 
+*   **If you are Series A–B ($2M–$10M raised):** Budget roughly **$3,000 to $6,000/year** and make sure your plan includes 409A valuations.",1
+94,2026-09-18,claude-haiku-4-5-20251001,Qapita,"# Free Cap Table Tools for Startups
+
+Yes, several options exist:
+
+## Fully Free Tools
+- **Pulley** - Free tier covers basic cap table management, equity tracking, and option grants
+- **Carta** - Limited free version available
+- **Gust** - Free cap table features included with their platform
+- **Ledgy** - Offers a free tier for early-stage startups
+
+## Low-Cost/Freemium Options
+- **Spreadsheet templates** - Sites like AngelList and various startup resources offer cap table templates (Google Sheets, Excel)
+- **Brex** - Some cap table features available to users
+- **Mercury** - Banking features with cap table tools
+
+## Important Caveats
+- Free tiers often have limitations (number of shareholders, equity types, rounds)
+- As you raise funding or grow, you'll likely need paid features or dedicated tools
+- Many investors eventually expect professional cap table management
+- What works for pre-seed might not scale
+
+## My suggestion
+Start with a well-structured spreadsheet template if you're very early. Move to a dedicated free tool once you plan to raise or have 20+ equity holders. Professional tools ($500-2000+/year) become worthwhile when you're actively managing equity or preparing for fundraising.
+
+What stage is your startup at? That might help narrow down the best fit.",0
