@@ -28,3 +28,6 @@ venv/
 
 # Generated locally by parse_mentions.py, rebuilt from results.csv each run
 results.db
+
+# Generated locally by eval_sample.py, reproducible via its fixed random seed
+eval_sample.csv
