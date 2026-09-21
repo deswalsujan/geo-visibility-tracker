@@ -1,0 +1,31 @@
+# Runs weekly_diff.py once a week and on manual trigger, posting the
+# trailing-vs-preceding-7-days comparison to Slack. Rebuilds results.db
+# from results.csv first since results.db is gitignored and doesn't
+# exist in a fresh checkout. The Slack webhook comes from a GitHub
+# Actions secret, never from a file in this repo.
+
+name: weekly_diff
+
+on:
+  schedule:
+    - cron: "0 1 * * 1" # Monday 01:00 UTC / 06:30 AM IST, after that day's geo_check run has landed (observed 00:04-00:10 UTC)
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v3
+
+      - name: Rebuild results.db from results.csv
+        run: uv run parse_mentions.py
+
+      - name: Run weekly_diff.py
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: uv run weekly_diff.py --post
